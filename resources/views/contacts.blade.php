@@ -18,6 +18,10 @@
           background-color:#031768;
         }
 
+        .body{
+          
+        }
+
         .mango_bottom{
           min-height: 30px;
           background-color:#CCCCCC ;
