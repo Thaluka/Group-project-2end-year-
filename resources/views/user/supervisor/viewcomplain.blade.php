@@ -8,38 +8,15 @@
     <link rel="stylesheet" href="/css/master.css">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="images/logo.png" />
+    <link href="{{ asset('css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
+
 
     <title>Login page</title>
     <style media="screen">
 
 
-    .mango_mid{
-      min-height: 50px;
-      background-color:#031768;
-    }
 
-    .mango_bottom{
-      min-height: 30px;
-      background-color:#CCCCCC ;
-      border-bottom: solid 2px #CCCCCC ;
-    }
-    .mango_texthead{
-      font-weight: bold;
-      font-family: Roboto;
-      color: #FFFFFF;
-    }
 
-    .mangonav_tab{
-      font-size: 20px;
-      font-weight: bold;
-      font-style: normal;
-      font-family:Roboto Medium;
-      color: #FFFFFF;
-    }
-    /*.imgshow{
-      border: solid 2px #000000;
-      border-bottom: solid 2px #000000;
-    }*/
     .mango_form{
         background-color:#ffffff;
         border: 2px solid #f2f2f2;

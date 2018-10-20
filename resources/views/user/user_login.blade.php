@@ -171,7 +171,7 @@
 
               <div class="form-group row mt-0">
                 <div class="col-sm-6 offset-sm-2">
-                   <p class="link_text text-left"> Register with us <a href="{{url('regcustomer')}}"> Sign up</a></p>
+                   <p class="link_text text-left">To register click here<a href="{{url('regcustomer')}}"> Sign up</a></p>
                 </div>
               </div>
 
