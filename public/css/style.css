@@ -66,6 +66,29 @@
         font-family:sans-serif;
         color: #000;
       }
+
+
+    .mango_logform{
+        min-height: 400px;
+        background-color:#ffffff;
+        border: 2px solid #f2f2f2;
+    box-shadow: 1px 1px 1px 1px;
+
+      }
+      label{
+        font-size: 18px;
+        font-weight: bold;
+        font-style: normal;
+        margin-top: 0PX;
+        font-family:sans-serif;
+        color: #000;
+      }
+      .form-group{
+        margin-top:30px;
+      }
+      input[type="password"]{
+     border: solid #bfbfbf 2px;
+      }
       .form-group{
         margin-top:30px;
       }
@@ -111,3 +134,17 @@
       font-size:16px;
       font-weight:bold;
     }
+    .btn{
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* .active{
+       background-color: #33A8FF;
+
+    }
+
+*/
+
+/*      <link href="{{ asset('css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
+*/

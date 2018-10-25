@@ -11,39 +11,8 @@
     <link rel="icon" type="image/png" href="images/logo.png" />
 
     <title>Home page</title>
-    <style media="screen">
+    <link href="{{ asset('css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
 
-        .mango_mid{
-          min-height: 50px;
-          background-color:#0000cc;
-        }
-
-        .mango_bottom{
-          min-height: 30px;
-          background-color:#fdfdfd;
-          border-bottom: solid 2px #0000cc;
-        }
-        .mango_texthead{
-          font-weight: bold;
-          font-family: sans-serif;
-        }
-
-        .mangonav_tab{
-          font-size: 24px;
-          font-weight: bold;
-          font-style: normal;
-          font-family:sans-serif;
-          color: #F5FFFF;
-        }
-        .imgshow{
-          border: solid 2px #000000;
-          border-bottom: solid 2px #000000;
-        }
-        .btn{
-        	margin-top:20px;
-        	margin-bottom:20px;
-        }
-    </style>
     <section>
         <nav class="mango_mid navbar navbar-expand-lg navbar-light ">
           <div class="mr-auto col-sm-3 col-lg-2 col-xs-12">

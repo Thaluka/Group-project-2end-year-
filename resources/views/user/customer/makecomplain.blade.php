@@ -15,7 +15,6 @@
     <style media="screen">
 
 
-   
 </style>
 <section>
   
@@ -38,14 +37,14 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <a class="navbar-brand" href="#"></a>
     <ul class="navbar-nav mt-0">
-      <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
-        <a class="nav-link text-left" href="#">Service request<span class="sr-only">(current)</span></a>
+      <li class="mangonav_tab nav-item  ml-0 active col-auto mr-auto">
+        <a class="nav-link text-left" href="#" >Service request<span class="sr-only">(current)</span></a>
       </li>
-      <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
-        <a class="nav-link text-left" href="#http://localhost:8000/home">Status</a>
+      <li class="mangonav_tab nav-item  ml-0   col-auto mr-auto">
+        <a class="nav-link text-left" href="#">Status</a>
       </li>
 
-      <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
+      <li class="mangonav_tab nav-item  ml-0  col-auto mr-auto">
         <a class="nav-link text-left" href="#">Rating</a>
       </li>
 
@@ -91,15 +90,7 @@
 
 
 
-	        <!--  <div class="form-group">
-                  <label for="exampleFormControlInput1">Company Name</label>
-                  <input type="text" class="form-control" name="comp_name" value="{{old('comp_name')}}" id="exampleFormControlInput1" placeholder="Enter your Company name" required>
-             </div>
-             <div class="form-group">
-                  <label for="exampleFormControlInput1">E-mail</label>
-                  <input type="email" class="form-control" name="email" value="{{ Auth::user()->email }}" id="exampleFormControlInput1" placeholder="Enter your email" required>
-             </div> -->
-
+	       
              <div class="form-group">
                   <label for="exampleFormControlTextarea1">Product Category</label>
                    <!-- <input type="text" class="form-control" name="address" value="" id="exampleFormControlInput1" placeholder="Enter your product name" required> -->

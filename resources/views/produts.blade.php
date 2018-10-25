@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <br><br>
 <h2 align="center">Products</h2>
 <div class="container">

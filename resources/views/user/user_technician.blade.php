@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="/css/master.css">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="images/logo.png" />
-    <link href="{{ asset('css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
-
 
     <title>Login page</title>
-    
+    <link href="{{ asset('css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
+
 <section>
     <nav class="mango_mid navbar navbar-expand-lg navbar-light ">
       <div class="mr-auto col-sm-3 col-lg-2 col-xs-12">
@@ -26,7 +25,8 @@
     </nav>
   </section>
 
-  <nav class="mango_bottom navbar navbar-expand-lg navbar-light ">
+  <section>
+    <nav class="mango_bottom navbar navbar-expand-lg navbar-light ">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
@@ -34,20 +34,20 @@
     <a class="navbar-brand" href="#"></a>
     <ul class="navbar-nav mt-0">
       <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
-        <a class="nav-link text-left" href="{{url('viewcomplain')}}" >Job Details<span class="sr-only">(current)</span></a>
+        <a class="nav-link text-left" href="#">Job Details<span class="sr-only">(current)</span></a>
       </li>
       <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
         <a class="nav-link text-left" href="#">Estimation</a>
       </li>
 
-     <!--  <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
+      <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
         <a class="nav-link text-left" href="#">My status</a>
       </li>
 
       <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
         <a class="nav-link text-left" href="#">Job status</a>
       </li>
- -->
+
 
     </ul>
     <ul class="navbar-nav ml-auto mt-0">
@@ -73,63 +73,48 @@
     </nav>
   </section>
   <section>
-    <div class="col-lg-10 mt-4">
+   <!--  <div class="col-lg-10 mt-4">
          <table class="table  table-striped table-responsive" width="100%">
                 <thead>
                        <tr class="bg-primary"  style="color:#FFFFFF;">
-                            <th class="bg-primary"></th>
-                            <th class="bg-primary">Company name</th>
-                            <th class="bg-primary">Customer's mail</th>
-                            <th class="bg-primary">Message</th>
-                            <th class="bg-primary">Location</th>
-                            <th class="bg-primary">Date & time</th>
-                            <th class="bg-primary">Action</th>
+
+                            <th class="bg-primary">User First Name</th>
+                            <th class="bg-primary">User Last Name</th>
+                            <th class="bg-primary">User email</th>
+                            <th class="bg-primary">User role</th>
+                            <th class="bg-primary">NIC</th>
+                            <th class="bg-primary">Mobile</th>
+                            <th class="bg-primary">Company</th>
+                            <th class="bg-primary">Address</th>
                       </tr>
                </thead>
 
                <tbody class="table-dark">
-                 @foreach ($complains as $complain)
+
 
                  <tr>
-                      <td>{{$complain->jobid}}</td>
-                      <td>{{$complain->company}}</td>
-                      <td>{{$complain->customeremail}}</td>
-                      <td>{{$complain->description}}</td>
-                      <td>{{$complain->location}}</td>
-                      <td>{{$complain->created_at}}</td>
-                      <td class="center"><a href="#" class="btn btn-success btn-min mr-1">Accept</a><a href="#" class="btn btn-danger btn-min ml-1">Reject</a></td>
+
+                      <td>{{ Auth::user()->fname }}</td>
+                      <td>{{ Auth::user()->lname }}</td>
+                      <td>{{ Auth::user()->email }}</td>
+                      <td>{{ Auth::user()->admin }}</td>
+                      <td>{{ Auth::user()->nic }}</td>
+                      <td>{{ Auth::user()->mobile }}</td>
+                      <td>{{ Auth::user()->compname }}</td>
+                      <td>{{ Auth::user()->address}}</td>
+
+
+
                  </tr>
 
-                 @endforeach
+
 
               </tbody>
       </table>
-    </div>
+    </div> -->
   </div>
 
   </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
