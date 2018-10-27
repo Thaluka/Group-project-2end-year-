@@ -45,9 +45,14 @@ Route::group(['middleware'=>['auth']],function ()
   Route::get('/user/useropedash','UsesController@opdashboard');
   Route::get('/user/usercustomer','UsesController@customerdashboard');
   Route::get('/user/usersupvisor','UsesController@supervisordashboard');
+  Route::get('/user/user_technician','UsesController@techniciandashboard');
+
+ 
 
   Route::match(['get','post'],'/complain','ComplainController@makecomplain');
   Route::match(['get','post'],'/viewcomplain','ComplainController@viewcomplain');
+
+
 
 
 });

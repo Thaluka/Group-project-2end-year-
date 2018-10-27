@@ -1,0 +1,5 @@
+T.supervisor : binurim95@gmail.com  123456
+customer      : h@gmail.com   harshani
+Manager   : manager@gmail.com manager
+Technician :technician@gmail.com  technician
+Operator : operator@gmail.com   operator

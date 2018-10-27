@@ -142,7 +142,7 @@
   <section>
   <div class="container mango_regform col-lg-4 col-md-6 col-xs-12 col-10 card">
        <div class="card-header row">
-	        <p  class="col-sm-4 offset-sm-4" >Register with us</p>
+	        <p class="col-sm-8" >Register with us</p>
 	   </div>
 	   <div class="card-body">
 	   <form action="{{url('regcustomer')}}" method="post" >{{csrf_field()}}

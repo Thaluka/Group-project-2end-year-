@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Complain;
+use App\Complain;   //model calling
 
 class ComplainController extends Controller
 {

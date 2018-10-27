@@ -11,92 +11,7 @@
     <link rel="icon" type="image/png" href="images/logo.png" />
 
     <title>Login page</title>
-    <style media="screen">
-
-
-    .mango_mid{
-      min-height: 50px;
-      background-color:#031768;
-    }
-
-    .mango_bottom{
-      min-height: 30px;
-      background-color:#CCCCCC ;
-      border-bottom: solid 2px #CCCCCC ;
-    }
-    .mango_texthead{
-      font-weight: bold;
-      font-family: Roboto;
-      color: #FFFFFF;
-    }
-
-    .mangonav_tab{
-      font-size: 20px;
-      font-weight: bold;
-      font-style: normal;
-      font-family:Roboto Medium;
-      color: #FFFFFF;
-    }
-    /*.imgshow{
-      border: solid 2px #000000;
-      border-bottom: solid 2px #000000;
-    }*/
-    .mango_logform{
-        min-height: 400px;
-        background-color:#ffffff;
-        border: 2px solid #f2f2f2;
-		box-shadow: 1px 1px 1px 1px;
-
-      }
-      label{
-        font-size: 18px;
-        font-weight: bold;
-        font-style: normal;
-        margin-top: 0PX;
-        font-family:sans-serif;
-        color: #000;
-      }
-      .form-group{
-        margin-top:30px;
-      }
-      input[type="password"]{
-		 border: solid #bfbfbf 2px;
-      }
-      input[type="email"]{
-
-        border: solid #bfbfbf 2px;
-      }
-
-      h3{
-        text-justify:inter-word;
-        margin-top:60px;
-        margin-bottom:60px;
-      }
-	  .link_text{
-		  font-size:12px;
-		  font-weight:bold;
-	  }
-
-	  li a{
-		  color:#ffffff;
-	  }
-
-
-      input[type="submit"]{
-		font-size:18px;
-		font-weight:bold;
-        float:right;
-        margin-top:20px;
-      }
-
-	  .card-header{
-		  background-color:#00F;
-		  color:#FFFFFF;
-		  height:50px;
-		  font-size:16px;
-		  font-weight:bold;
-	  }
-</style>
+   <link href="{{ asset('css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
 <section>
     <nav class="mango_mid navbar navbar-expand-lg navbar-light ">
       <div class="mr-auto col-sm-3 col-lg-2 col-xs-12">
@@ -171,7 +86,7 @@
 
               <div class="form-group row mt-0">
                 <div class="col-sm-6 offset-sm-2">
-                   <p class="link_text text-left"> Register with us <a href="{{url('regcustomer')}}"> Sign up</a></p>
+                   <p class="link_text text-left">To register click here<a href="{{url('regcustomer')}}"> Sign up</a></p>
                 </div>
               </div>
 
@@ -188,6 +103,24 @@
 </section>
 </div>
 <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

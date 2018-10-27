@@ -122,7 +122,7 @@
     <a class="navbar-brand" href="#"></a>
     <ul class="navbar-nav mt-0">
       <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
-        <a class="nav-link text-left" href="http://localhost:8000/home">Service request<span class="sr-only">(current)</span></a>
+        <a class="nav-link text-left" href="#">Service request<span class="sr-only">(current)</span></a>
       </li>
       <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
         <a class="nav-link text-left" href="#">Estimation</a>

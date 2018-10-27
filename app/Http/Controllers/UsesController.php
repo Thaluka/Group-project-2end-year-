@@ -20,17 +20,21 @@ class UsesController extends Controller
             return redirect('/user/userdash');
           /*Session::put('adminSession',$data['email']);*/
         }
-        elseif(Auth::attempt(['email'=>$data['email'],'password'=>$data['password'],'admin'=>'0'])){
+        elseif(Auth::attempt(['email'=>$data['email'],'password'=>$data['password'],'admin'=>'Operator'])){
           return redirect('/user/useropedash')->with('flash_message_success','Logged in as Operator');
         }
         elseif(Auth::attempt(['email'=>$data['email'],'password'=>$data['password'],'admin'=>'customer'])){
           return redirect('/complain');
         }
+        // elseif(Auth::attempt(['email'=>$data['email'],'password'=>$data['password'],'admin'=>'T.supervisor'])){
+        //   return redirect('/viewcomplain');
+        // }
+
         elseif(Auth::attempt(['email'=>$data['email'],'password'=>$data['password'],'admin'=>'T.supervisor'])){
-          return redirect('/viewcomplain');
+          return redirect('/user/usersupvisor');
         }
-        elseif(Auth::attempt(['email'=>$data['email'],'password'=>$data['password'],'admin'=>'4 '])){
-          return redirect('/user/userdash')->with('flash_message_success','Logged in as Technican ');
+        elseif(Auth::attempt(['email'=>$data['email'],'password'=>$data['password'],'admin'=>'Technician'])){
+          return redirect('/user/user_technician')->with('flash_message_success','Logged in as Technican ');
         }
         else {
           return redirect('/user')->with('flash_message_error','Invalid Username or Password');
@@ -57,6 +61,14 @@ class UsesController extends Controller
     {
       return view('user.usersupvisor');
     }
+
+     public function techniciandashboard()
+    {
+      return view('user.user_technician');
+    }
+
+
+   
 
   /*public function ushome()
   //  {
