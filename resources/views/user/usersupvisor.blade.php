@@ -34,16 +34,16 @@
     <a class="navbar-brand" href="#"></a>
     <ul class="navbar-nav mt-0">
       <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
-        <a class="nav-link text-left" href="{{url('viewcomplain')}}" >Job Details<span class="sr-only">(current)</span></a>
+        <a class="nav-link text-left" href="{{url('viewcomplain')}}" >Job Requests<span class="sr-only">(current)</span></a>
       </li>
       <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
         <a class="nav-link text-left" href="#">Estimation</a>
       </li>
 
-      <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
+      <!-- <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
         <a class="nav-link text-left" href="#">My status</a>
       </li>
-
+ -->
       <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
         <a class="nav-link text-left" href="#">Job status</a>
       </li>

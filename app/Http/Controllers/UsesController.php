@@ -31,7 +31,7 @@ class UsesController extends Controller
         // }
 
         elseif(Auth::attempt(['email'=>$data['email'],'password'=>$data['password'],'admin'=>'T.supervisor'])){
-          return redirect('/user/usersupvisor');
+          return redirect('/viewcomplain');
         }
         elseif(Auth::attempt(['email'=>$data['email'],'password'=>$data['password'],'admin'=>'Technician'])){
           return redirect('/user/user_technician')->with('flash_message_success','Logged in as Technican ');
@@ -66,6 +66,34 @@ class UsesController extends Controller
     {
       return view('user.user_technician');
     }
+
+
+
+
+
+      public function maintenance()
+    {
+      return view('user.customer.maintenance');
+    }
+
+     public function productdetails()
+    {
+      return view('user.customer.productdetails');
+    }
+
+    //  public function assign()
+    // {
+    //   return view('user.supervisor.assign');
+    // }
+
+     public function feedback()
+    {
+      return view('user.customer.feedback');
+    }
+
+
+
+
 
 
    

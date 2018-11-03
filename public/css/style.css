@@ -1,11 +1,13 @@
  .mango_mid{
           min-height: 50px;
           background-color:#031768;
+        
         }
 
         .mango_bottom{
           min-height: 30px;
-          background-color:#CCCCCC ;
+          /*background-color:#CCCCCC ;*/
+          background-color: rgba(0,0,0,0.0);
           border-bottom: solid 2px #CCCCCC ;
         }
         .mango_texthead{

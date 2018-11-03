@@ -27,6 +27,32 @@ Route::get('/contacts',function(){
 Route::get('/home',function (){
   return view('welcome');
 });
+
+
+
+
+
+
+
+
+
+// Route::get('/productdetails',function (){
+//   return view('user.customer.productdetails');
+// });
+
+// Route::get('/feedback',function (){
+//   return view('user.customer.feedback');
+// });
+
+// Route::get('/assign',function (){
+//   return view('user.supervisor.assign');
+// });
+
+
+
+
+
+
 /*Route::match(['get','post'],'/admin','AdminController@login');
 Route::get('/logout','AdminController@logout');
 
@@ -52,13 +78,24 @@ Route::group(['middleware'=>['auth']],function ()
   Route::match(['get','post'],'/complain','ComplainController@makecomplain');
   Route::match(['get','post'],'/viewcomplain','ComplainController@viewcomplain');
 
+  Route::match(['get','post'],'/assign','ComplainController@assign');
+
+
+  Route::match(['get','post'],'/maintenance','UsesController@maintenance');
+  Route::match(['get','post'],'/productdetails','UsesController@productdetails');
+  Route::match(['get','post'],'/feedback','UsesController@feedback');
+  
+
+
+
+
+
 
 
 
 });
 
 Route::get('/logout','UsesController@logout');
-
 
 
 
