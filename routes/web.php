@@ -65,6 +65,9 @@ Route::get('/logout','AdminController@logout');
 Route::match(['get','post'],'/user','UsesController@log');
 Route::match(['get','post'],'/regcustomer','RegisterController@custregister');
 
+
+
+
 Route::group(['middleware'=>['auth']],function ()
 {
   Route::get('/user/userdash','UsesController@dashboard');
@@ -85,6 +88,14 @@ Route::group(['middleware'=>['auth']],function ()
   Route::match(['get','post'],'/productdetails','UsesController@productdetails');
   Route::match(['get','post'],'/feedback','UsesController@feedback');
   
+
+
+
+
+
+  Route::match(['get','post'],'/custregoperator','RegisterController@custopregister');
+
+  Route::match(['get','post'],'/employreg','RegisterController@employregister');
 
 
 

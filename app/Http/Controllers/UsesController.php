@@ -21,7 +21,7 @@ class UsesController extends Controller
           /*Session::put('adminSession',$data['email']);*/
         }
         elseif(Auth::attempt(['email'=>$data['email'],'password'=>$data['password'],'admin'=>'Operator'])){
-          return redirect('/user/useropedash')->with('flash_message_success','Logged in as Operator');
+          return redirect('/custregoperator')->with('flash_message_success','Logged in as Operator');
         }
         elseif(Auth::attempt(['email'=>$data['email'],'password'=>$data['password'],'admin'=>'customer'])){
           return redirect('/complain');

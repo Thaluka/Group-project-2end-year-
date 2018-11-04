@@ -41,12 +41,10 @@
       </li>
 
       <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
-        <a class="nav-link text-left" href="#">Customer registration</a>
+        <a class="nav-link text-left" href="{{url('custregoperator')}}">Customer registration</a>
       </li>
 
-      <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
-        <a class="nav-link text-left" href="#">Employee registration</a>
-      </li>
+     
 
 
     </ul>
