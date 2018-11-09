@@ -9,89 +9,107 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="images/logo.png" />
 
-    <title>Login page</title>
- <link href="{{ asset('css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
-<section>
-    <nav class="mango_mid navbar navbar-expand-lg navbar-light ">
-      <div class="mr-auto col-sm-3 col-lg-2 col-xs-12">
-           <img src="http://localhost:8000/images/logo.png" width="205px" height="70px" alt="Responsive image" class="d-inline-block align-left">
-      </div>
-      <ul class="mango_texthead navbar-nav mr-auto mt-0 mt-lg-1">
-          
-            <h2 class=" font-weight-bold " style="margin-right:100px; color:#FFFFFF">ASPARAI<span style="margin-left:15px; margin-right:15px; ">REPAIR & MAINTENANCE SERVICE</span></h2>
-       </ul>
-    </nav>
-  </section>
+    <title>Manager Dashboard</title>
+    <link href="{{ asset('css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
 
-  <section>
-    <nav class="mango_bottom navbar navbar-expand-lg navbar-light ">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <a class="navbar-brand" href="#"></a>
-    <ul class="navbar-nav mt-0">
-      <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
-        <a class="nav-link text-left" href="{{url('employreg')}}">Employee Registration<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
-        <a class="nav-link text-left" href="#">Job details</a>
-      </li>
+    <section>
+      <nav class="mango_mid navbar navbar-expand-lg navbar-light ">
+        <div class="mr-auto col-sm-3 col-lg-2 col-xs-12">
+          <img src="http://localhost:8000/images/logo.png" width="205px" height="70px" alt="Responsive image" class="d-inline-block align-left">
+        </div>
+        <ul class="mango_texthead navbar-nav mr-auto mt-0 mt-lg-1">
+          <h2 class=" font-weight-bold " style="margin-right:100px; color:#FFFFFF">ASPARAI<span style="margin-left:15px; margin-right:15px; ">REPAIR & MAINTENANCE SERVICE</span></h2>
+        </ul>
+      </nav>
+    </section>
 
-      <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
-        <a class="nav-link text-left" href="#">Customer Details</a>
-      </li>
+    <section>
+      <nav class="mango_bottom navbar navbar-expand-lg navbar-light ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="#"></a>
+
+          <!-- <ul class="navbar-nav mt-0">
+
+            <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
+              <a class="nav-link text-left" href="{{url('employreg')}}">Employee Registration<span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
+              <a class="nav-link text-left" href="#">Job details</a>
+            </li>
+
+            <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
+              <a class="nav-link text-left" href="#">Customer Details</a>
+            </li>
+
+            <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
+              <a class="nav-link text-left" href="#">Employee Details</a>
+            </li>
+
+          </ul> -->
+
+          <ul class="navbar-nav ml-auto mt-0">
+            <li class="nav-item dropdown mangonav_tab">
+              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+              <strong style="font-weight:bold; font-size:18px;">{{ Auth::user()->fname }}(<span>{{ Auth::user()->admin }}</span>) <span class="caret"></span></strong>
+              </a>
 
 
-      <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
-        <a class="nav-link text-left" href="#">Employee Details</a>
-      </li>
-
-
-    </ul>
-    <ul class="navbar-nav ml-auto mt-0">
-      <li class="nav-item dropdown mangonav_tab">
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    <strong style="font-weight:bold; font-size:18px;">{{ Auth::user()->fname }}(<span>{{ Auth::user()->admin }}</span>) <span class="caret"></span></strong>
-                </a>
-
-                <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('logout') }}"
+              <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ route('logout') }}"
                        onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
-                    </a>
+                </a>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
-                    </form>
-                </div>
+                </form>
+              </div>
             </li>
-    </ul>
-    </div>
-    </nav>
-  </section>
-  <section>
-    <div class="col-lg-10 mt-4">
-         <table class="table  table-striped table-responsive" width="100%">
-                <thead>
-                       <tr class="bg-primary"  style="color:#FFFFFF;">
-
-                            <th class="bg-primary">User First Name</th>
-                            <th class="bg-primary">User Last Name</th>
-                            <th class="bg-primary">User email</th>
-                            <th class="bg-primary">User role</th>
-                            <th class="bg-primary">NIC</th>
-                            <th class="bg-primary">Mobile</th>
-                            <th class="bg-primary">Company</th>
-                            <th class="bg-primary">Address</th>
-                      </tr>
-               </thead>
-
-               <tbody class="table-dark">
+          </ul>
+        </div>
+      </nav>
+    </section>
 
 
-                 <tr>
+    <section id="main">
+    <div class="row">
+
+      <div class="col-md-2">
+        <div class="list-group ">
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary active">Employee details</a>
+          <a href="{{url('employreg')}}" class="list-group-item list-group-item-action">Employee registration</a>
+          <a href="#" class="list-group-item list-group-item-action">Job Details</a>
+          <a href="#" class="list-group-item list-group-item-action ">Customer Details</a>
+        </div>
+      </div>
+
+
+        
+    
+      <div class="col-lg-10 mt-4">
+        <table class="table  table-striped table-responsive" width="100%">
+          <thead>
+            <tr class="bg-primary"  style="color:#FFFFFF;">
+
+              <th class="bg-primary">User First Name</th>
+              <th class="bg-primary">User Last Name</th>
+              <th class="bg-primary">User email</th>
+              <th class="bg-primary">User role</th>
+              <th class="bg-primary">NIC</th>
+              <th class="bg-primary">Mobile</th>
+              <th class="bg-primary">Company</th>
+              <th class="bg-primary">Address</th>
+            </tr>
+          </thead>
+
+          <tbody class="table-dark">
+            <tr>
 
                       <td>{{ Auth::user()->fname }}</td>
                       <td>{{ Auth::user()->lname }}</td>
@@ -104,16 +122,19 @@
 
 
 
-                 </tr>
+            </tr>
 
-
-
-              </tbody>
-      </table>
-    </div>
+          </tbody>
+        </table>
+      </div>
+    </section>
   </div>
+</nav>
+</section>
+</head>
 
-  </section>
+  
+  <body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

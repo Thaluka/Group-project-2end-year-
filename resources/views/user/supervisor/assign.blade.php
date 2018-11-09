@@ -63,10 +63,36 @@
 
 
     <section>
+
+       <div class="container">
+
       <div class="row">
         <div class="col-8">
+                <div class="row">
+          <div class="col-4">
+            <br>
 
-          SELECTED complain details should be appear here.
+          <b> Complaint Details</b><br><br>
+
+
+          <img src="{{ asset('images/barbeque.jpg')}}" alt="..." class="img-thumbnail rounded-float-left" width="100%" height="100%">
+        </div>
+        <div class="col-8">
+          <br><br><br>
+
+          <ul>
+            <li>Company Name :- </li>
+            <li>Email:- </li>
+            <li>Product Category :-</li>
+            <li>Message :- </li>
+            <li>Address  :-</li>
+            <li>City :-</li>
+          </ul>
+          </div>
+        </div>
+
+
+          
           <!-- <div class="col-lg-10 mt-4"> -->
            <!--  <table class="table  table-striped table-responsive" width="100%">
               <thead>
@@ -102,8 +128,7 @@
             </table> -->
           </div>
       
-
-      <div class="col-4" style="background-color: grey" >SEARCH TECHNICIAN</div>
+      <div class="col-4" style="background-color: grey" ><br><br> SEARCH TECHNICIAN</div>
     </div>
 
 

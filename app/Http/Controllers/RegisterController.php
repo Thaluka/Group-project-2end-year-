@@ -67,7 +67,7 @@ class RegisterController extends Controller
       //  $register->address=$data['address'];
       //  $register->region=$data['region'];
         $user->save();
-        return redirect('/user')->with('flash_message_success','Register successfully, please login now..');
+        return redirect('/custregoperator')->with('flash_message_success',' Cutomer Registered successfully. User Name and pw should be displayed and send to customer ');
       }
       return view('user.operator.custregoperator');
     }

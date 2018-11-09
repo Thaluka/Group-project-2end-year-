@@ -20,8 +20,13 @@ class UsesController extends Controller
             return redirect('/user/userdash');
           /*Session::put('adminSession',$data['email']);*/
         }
+        // elseif(Auth::attempt(['email'=>$data['email'],'password'=>$data['password'],'admin'=>'Operator'])){
+        //   return redirect('/custregoperator')->with('flash_message_success','Logged in as Operator');
+
         elseif(Auth::attempt(['email'=>$data['email'],'password'=>$data['password'],'admin'=>'Operator'])){
-          return redirect('/custregoperator')->with('flash_message_success','Logged in as Operator');
+          return redirect('/custregoperator');
+
+
         }
         elseif(Auth::attempt(['email'=>$data['email'],'password'=>$data['password'],'admin'=>'customer'])){
           return redirect('/complain');
@@ -90,6 +95,21 @@ class UsesController extends Controller
     {
       return view('user.customer.feedback');
     }
+
+
+     public function addproducts()
+    {
+      return view('user.operator.addproducts');
+    }
+
+     public function estimateopr()
+    {
+      return view('user.operator.estimateopr');
+    }
+
+
+
+
 
 
 

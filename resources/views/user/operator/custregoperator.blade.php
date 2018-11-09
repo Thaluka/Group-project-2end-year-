@@ -11,87 +11,7 @@
     <link rel="icon" type="image/png" href="images/logo.png" />
 
     <title>Register page</title>
-    <style media="screen">
-    .mango_mid{
-      min-height: 50px;
-      background-color:#031768;
-    }
-
-    .mango_bottom{
-      min-height: 30px;
-      background-color:#CCCCCC ;
-      border-bottom: solid 2px #CCCCCC ;
-    }
-    .mango_texthead{
-      font-weight: bold;
-      font-family: Roboto;
-      color: #FFFFFF;
-    }
-
-    .mangonav_tab{
-      font-size: 20px;
-      font-weight: bold;
-      font-style: normal;
-      font-family:Roboto Medium;
-      color: #FFFFFF;
-    }
-
-        .mango_regform{
-          min-height: 500px;
-         background-color:#ffffff;
-          border: 2px solid #f2f2f2;
-  		box-shadow: 1px 1px 1px 1px;
-
-        }
-        label{
-          font-size: 18px;
-          font-weight: bold;
-          font-style: normal;
-          margin-top: 0PX;
-          font-family:sans-serif;
-          color: #000;
-        }
-        .form-group{
-          margin-top:30px;
-        }
-        input[type="text"]{
-
-          border:solid #bfbfbf 2px;
-        }
-        input[type="password"]{
-  		 border: solid #bfbfbf 2px;
-        }
-        input[type="email"]{
-
-          border: solid #bfbfbf 2px;
-        }
-
-        h1{
-          text-justify:inter-word;
-          margin-top:20px;
-          margin-bottom:20px;
-        }
-        input[ type="reset"]{
-
-          float:right;
-          margin-top:20px;
-        }
-        input[type="submit"]{
-
-          float:right;
-          margin-top:20px;
-        }
-
-  	  .card-header{
-  		  background-color:#00F;
-  		  color:#FFFFFF;
-  		  height:60px;
-  		  font-size:16px;
-  		  font-weight:bold;
-  	  }
-
-
-    </style>
+   <link href="{{ asset('css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
 
     <section>
       <nav class="mango_mid navbar navbar-expand-lg navbar-light ">
@@ -112,13 +32,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <a class="navbar-brand" href="#"></a>
-    <ul class="navbar-nav mt-0">
+   <!--  <ul class="navbar-nav mt-0">
 
 
       <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
         <a class="nav-link text-left" href="{{url('custregoperator')}}">Customer registration</a>
       </li>
-      
+
       <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
         <a class="nav-link text-left" href="#">Job requests<span class="sr-only">(current)</span></a>
       </li>
@@ -129,7 +49,7 @@
       
 
      
-    </ul>
+    </ul> -->
     <ul class="navbar-nav ml-auto mt-0">
       <li class="nav-item dropdown mangonav_tab">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -152,15 +72,41 @@
     </div>
     </nav>
   </section>
-    <br>
 
-  <section>
-  <div class="container mango_regform col-lg-4 col-md-6 col-xs-12 col-10 card">
+
+
+<!--          <div class="container col-lg-12 mt-3"></div> --> <!-- break between header and dashboard -->
+
+    <section id="main">
+       <!--  <div class="container col-lg-12"> -->
+            <div class="row">
+                <div class="col-md-2">
+                        <div class="list-group ">
+                                <a href="#" class="list-group-item active list-group-item-primary list-group-item-action">Registration</a>
+                                <a href="{{url('addjoboperator')}}" class="list-group-item list-group-item-action">Job Requests</a>
+                                <a href="{{url('estimateopr')}}" class="list-group-item list-group-item-action">Estimations</a>
+                                <a href="{{url('addproducts')}}" class="list-group-item list-group-item-action">Products</a>
+                              </div>
+
+                </div>
+
+
+
+  <!-- <section> -->
+  <div class="container mango_regform col-lg-6 col-md-10 col-xs-12 col-10 card">
        <div class="card-header row">
 	        <p class="col-sm-8" >Register with us</p>
 	   </div>
 	   <div class="card-body">
-	   <form action="{{url('regcustomer')}}" method="post" >{{csrf_field()}}
+       @if(Session::has('flash_message_success'))
+
+           <div class="col-sm-12 alert alert-success alert-block">
+                <button type="button" class="close" data-dismiss="alert"></button>
+                        <strong>{!! session('flash_message_success') !!}</strong>
+           </div>
+        @endif
+
+	   <form action="{{url('/custregoperator')}}" method="post" >{{csrf_field()}}
 
 
 

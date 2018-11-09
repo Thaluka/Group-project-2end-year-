@@ -95,6 +95,16 @@ Route::group(['middleware'=>['auth']],function ()
 
   Route::match(['get','post'],'/custregoperator','RegisterController@custopregister');
 
+  Route::match(['get','post'],'/addjoboperator','ComplainController@makecomplainoperator');
+
+  Route::match(['get','post'],'/addproducts','UsesController@addproducts');
+
+  Route::match(['get','post'],'/estimateopr','UsesController@estimateopr');
+
+
+
+
+
   Route::match(['get','post'],'/employreg','RegisterController@employregister');
 
 

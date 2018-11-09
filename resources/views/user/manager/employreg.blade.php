@@ -32,7 +32,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <a class="navbar-brand" href="#"></a>
-    <ul class="navbar-nav mt-0">
+    <!-- <ul class="navbar-nav mt-0">
       <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
         <a class="nav-link text-left" href="{{url('employreg')}}">Employee Registration<span class="sr-only">(current)</span></a>
       </li>
@@ -50,7 +50,7 @@
       </li>
 
 
-    </ul>
+    </ul> -->
     <ul class="navbar-nav ml-auto mt-0">
       <li class="nav-item dropdown mangonav_tab">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -73,9 +73,26 @@
     </div>
     </nav>
   </section>
+   <section id="main">
+    <div class="row">
+
+      <div class="col-md-2">
+        <div class="list-group ">
+          <a href="{{url('user/userdash
+
+
+
+
+
+
+          ')}}" class="list-group-item list-group-item-action list-group-item-primary active">Employee details</a>
+          <a href="#" class="list-group-item list-group-item-action">Employee registration</a>
+          <a href="#" class="list-group-item list-group-item-action">Job Details</a>
+          <a href="#" class="list-group-item list-group-item-action ">Customer Details</a>
+        </div>
+      </div>
     <br>
 
-  <section>
   <div class="container mango_regform col-lg-4 col-md-6 col-xs-12 col-10 card">
        <div class="card-header row">
 	        <p class="col-sm-8" >Register with us</p>
