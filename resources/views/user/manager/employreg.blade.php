@@ -10,135 +10,89 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="images/logo.png" />
 
-    <title>Register page</title>
-    <style media="screen">
-    .mango_mid{
-      min-height: 50px;
-      background-color:#031768;
-    }
-
-    .mango_bottom{
-      min-height: 30px;
-      background-color:#CCCCCC ;
-      border-bottom: solid 2px #CCCCCC ;
-    }
-    .mango_texthead{
-      font-weight: bold;
-      font-family: Roboto;
-      color: #FFFFFF;
-    }
-
-    .mangonav_tab{
-      font-size: 20px;
-      font-weight: bold;
-      font-style: normal;
-      font-family:Roboto Medium;
-      color: #FFFFFF;
-    }
-
-        .mango_regform{
-          min-height: 500px;
-         background-color:#ffffff;
-          border: 2px solid #f2f2f2;
-  		box-shadow: 1px 1px 1px 1px;
-
-        }
-        label{
-          font-size: 18px;
-          font-weight: bold;
-          font-style: normal;
-          margin-top: 0PX;
-          font-family:sans-serif;
-          color: #000;
-        }
-        .form-group{
-          margin-top:30px;
-        }
-        input[type="text"]{
-
-          border:solid #bfbfbf 2px;
-        }
-        input[type="password"]{
-  		 border: solid #bfbfbf 2px;
-        }
-        input[type="email"]{
-
-          border: solid #bfbfbf 2px;
-        }
-
-        h1{
-          text-justify:inter-word;
-          margin-top:20px;
-          margin-bottom:20px;
-        }
-        input[ type="reset"]{
-
-          float:right;
-          margin-top:20px;
-        }
-        input[type="submit"]{
-
-          float:right;
-          margin-top:20px;
-        }
-
-  	  .card-header{
-  		  background-color:#00F;
-  		  color:#FFFFFF;
-  		  height:60px;
-  		  font-size:16px;
-  		  font-weight:bold;
-  	  }
-
-
-    </style>
+    <title>Employee Register page</title>
+     <link href="{{ asset('css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
 
     <section>
       <nav class="mango_mid navbar navbar-expand-lg navbar-light ">
         <div class="mr-auto col-sm-3 col-lg-2 col-xs-12">
-             <img src="{{ asset('images/logo.png')}}" width="205px" height="70px" alt="Responsive image" class="d-inline-block align-left">
+          <img src="{{ asset('images/logo.png')}}" width="205px" height="70px" alt="Responsive image" class="d-inline-block align-left">
         </div>
         <ul class="mango_texthead navbar-nav mr-auto mt-0 mt-lg-1">
-           
-              <h2 class=" font-weight-bold " style="margin-right:100px; color:#FFFFFF">ASPARAI<span style="margin-left:15px; margin-right:15px; ">REPAIR & MAINTENANCE SERVICE</span></h2>
+
+          <h2 class=" font-weight-bold " style="margin-right:100px; color:#FFFFFF">ASPARAI<span style="margin-left:15px; margin-right:15px; ">REPAIR & MAINTENANCE SERVICE</span></h2>
          </ul>
       </nav>
     </section>
 
-    <section>
-      <nav class="mango_bottom navbar navbar-expand-lg navbar-light ">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a class="navbar-brand" href="{{url('home')}}"></a>
-      <ul class="navbar-nav mt-0">
-        <li class="mangonav_tab nav-item active ml-0 col-md-3  col-auto mr-auto">
-          <a class="nav-link text-left" href="{{url('home')}}">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="mangonav_tab nav-item active ml-0 col-md-3  col-auto mr-auto">
-          <!--<a class="nav-link text-left" href="{{url('products')}}">Products</a>-->
-        </li>
-        <li class="mangonav_tab nav-item active ml-0 col-md-3 col-auto mr-auto">
-          <!--<a class="nav-link text-left" href="{{url('services')}}">Services</a>-->
-        </li>
-        <li class="mangonav_tab nav-item active ml-0 col-md-3 col-auto mr-auto">
-          <!--<a class="nav-link text-left" href="{{url('contacts')}}">Contact</a>-->
-        </li>
+     <section>
+    <nav class="mango_bottom navbar navbar-expand-lg navbar-light ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="#"></a>
+    <!-- <ul class="navbar-nav mt-0">
+      <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
+        <a class="nav-link text-left" href="{{url('employreg')}}">Employee Registration<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
+        <a class="nav-link text-left" href="#">Job details</a>
+      </li>
+
+      <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
+        <a class="nav-link text-left" href="#">Customer Details</a>
+      </li>
 
 
-      </ul>
-      <ul class="navbar-nav ml-auto mt-0">
-        <li class="mangonav_tab nav-item active col-md-2 col-auto mr-auto">
-          <a class="nav-link" href="{{url('user')}}">Login</a>
-        </li>
-      </ul>
+      <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
+        <a class="nav-link text-left" href="#">Employee Details</a>
+      </li>
+
+
+    </ul> -->
+    <ul class="navbar-nav ml-auto mt-0">
+      <li class="nav-item dropdown mangonav_tab">
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <strong style="font-weight:bold; font-size:18px;">{{ Auth::user()->fname }}(<span>{{ Auth::user()->admin }}</span>) <span class="caret"></span></strong>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                                     document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </div>
+            </li>
+    </ul>
+    </div>
+    </nav>
+  </section>
+   <section id="main">
+    <div class="row">
+
+      <div class="col-md-2">
+        <div class="list-group ">
+          <a href="{{url('user/userdash
+
+
+
+
+
+
+          ')}}" class="list-group-item list-group-item-action list-group-item-primary active">Employee details</a>
+          <a href="#" class="list-group-item list-group-item-action">Employee registration</a>
+          <a href="#" class="list-group-item list-group-item-action">Job Details</a>
+          <a href="#" class="list-group-item list-group-item-action ">Customer Details</a>
+        </div>
       </div>
-      </nav>
-        </section>
     <br>
 
-  <section>
   <div class="container mango_regform col-lg-4 col-md-6 col-xs-12 col-10 card">
        <div class="card-header row">
 	        <p class="col-sm-8" >Register with us</p>
@@ -151,18 +105,32 @@
               <div class="form-group row">
 
                    <div class="col-sm-6 mb-1">
-                      <input type="text" class="form-control"  name="fname" value="{{old('fname')}}" placeholder="Enter your first name" required>
+                      <input type="text" class="form-control"  name="fname" value="{{old('fname')}}" placeholder="Employee's first name" required>
                    </div>
 
                    <div class="col-sm-6 mb-1">
-                      <input type="text" class="form-control" name="lname" value="{{old('lname')}}" placeholder="Enter your last name" required>
+                      <input type="text" class="form-control" name="lname" value="{{old('lname')}}" placeholder="Employee's last name" required>
                    </div>
+              </div>
+
+
+               <div class="form-group row">
+                   <div class="col-sm-12 mt-1">
+                        <input type="text" class="form-control" name="company" value="{{old('company')}}" placeholder="Employee ID" required>
+                    </div>
+              </div>
+
+
+               <div class="form-group row">
+                   <div class="col-sm-12 mt-1">
+                        <input type="text" class="form-control" name="company" value="{{old('company')}}" placeholder="Job Role" required>
+                    </div>
               </div>
 
               <div class="form-group row">
 
                    <div class="col-sm-12 mt-1">
-                      <input type="email" class="form-control" name="email" value="{{old('email')}}" placeholder="Enter your e-mail address" required>
+                      <input type="email" class="form-control" name="email" value="{{old('email')}}" placeholder="Enter e-mail address" required>
                    </div>
               </div>
 
@@ -176,44 +144,46 @@
           @endif
 
                    <div class="col-sm-12 mt-1">
-                      <input type="password" class="form-control" name="password"  id="password" placeholder="Enter your password" required>
+                      <input type="password" class="form-control" name="password"  id="password" placeholder="Enter a password" required>
                    </div>
               </div>
 
               <div class="form-group row">
 
                    <div class="col-sm-12 mt-1">
-                      <input type="password" class="form-control" name="confirm_password" id="confirm_password" placeholder="Confirm your password">
+                      <input type="password" class="form-control" name="confirm_password" id="confirm_password" placeholder="Confirm the password">
                    </div>
               </div>
 
 			  <div class="form-group row">
 
                    <div class="col-sm-12 mt-1">
-                      <input type="text" class="form-control" name="nid" value="{{old('nid')}}" placeholder="Enter Your NIC Number" required>
+                      <input type="text" class="form-control" name="nid" value="{{old('nid')}}" placeholder="Enter NIC Number" required>
                    </div>
               </div>
 
               <div class="form-group row">
 
                     <div class="col-sm-12 mt-1">
-                        <input type="text" class="form-control" name="mobile" value="{{old('mobile')}}" placeholder="Enter your contact number" required>
+                        <input type="text" class="form-control" name="mobile" value="{{old('mobile')}}" placeholder="Enter contact number" required>
                     </div>
               </div>
 
 
               <div class="form-group row">
                    <div class="col-sm-12 mt-1">
-                        <input type="text" class="form-control" name="company" value="{{old('company')}}" placeholder="Enter your work place" required>
+                        <input type="text" class="form-control" name="company" value="{{old('company')}}" placeholder="Enter adress" required>
                     </div>
               </div>
 
-               <div class="form-group row">
+               <!-- <div class="form-group row">
 
                      <div class="col-sm-12 mt-1">
                          <input type="text" class="form-control" name="address" value="{{old('address')}}" placeholder="Enter your work place address" required>
                      </div>
-               </div>
+               </div> -->
+
+
 
 
 

@@ -17,6 +17,7 @@ class CreateComplainTable extends Migration
             $table->increments('jobid')->unique();
             $table->string('company');
             $table->string('customeremail');
+            $table->string('category');
             $table->text('description');
             $table->string('address');
             $table->string('location');

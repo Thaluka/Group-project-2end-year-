@@ -19,6 +19,7 @@
         <img src="http://localhost:8000/images/logo.png" width="205px" height="70px" alt="Responsive image" class="d-inline-block align-left">
       </div>
       <ul class="mango_texthead navbar-nav mr-auto mt-0 mt-lg-1">
+          <!-- <h2 style="color:#FFFFFF;  text-justify:inter-word;text-align:Center;font-weight:550;">ASPARAI<br><span style="margin-left:15px; margin-right:15px;"> REPAIR</span><span  style="margin-left:5px; margin-right:10px;">  &</span><span  style="margin-left:5px; margin-right:10px;"> MAINTENANCE<span><span  style="margin-left:5px; margin-right:10px;"> SERVICE<span></h2> -->
 
         <h2 class=" font-weight-bold " style="margin-right:100px; color:#FFFFFF">ASPARAI<span style="margin-left:15px; margin-right:15px; ">REPAIR & MAINTENANCE SERVICE</span></h2>
       </ul>
@@ -77,89 +78,26 @@
 
       <div class="col-md-2">
         <div class="list-group ">
-          <a href="#" class="list-group-item list-group-item-action list-group-item-primary active">Make a complaint</a>
-          <a href="{{url('maintenance')}}" class="list-group-item list-group-item-action">Maintenance Details</a>
+          <a href="{{url('complain')}}" class="list-group-item list-group-item-action ">Make a complaint</a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary active">Maintenance Details</a>
           <a href="{{url('productdetails')}}" class="list-group-item list-group-item-action">Product Details</a>
           <a href="{{url('feedback')}}" class="list-group-item list-group-item-action ">Feedback</a>
         </div>
       </div>
-
-      <div  class="container  mango_form col-lg-6 col-md-8 col-xs-12 col-10  mt-4 mb-4">
-        <div class="card-header row">
-	        <p  class="col-sm-8 offset-sm-4" >Write your request</p>
-	      </div>
-        <div class="card-body">
-          @if(Session::has('flash_message_success'))
-          <div class="col-sm-12 alert alert-success alert-block">
-            <button type="button" class="close" data-dismiss="alert"></button>
-              <strong>{!! session('flash_message_success') !!}</strong>
-          </div>
-          @endif
-          <form action="{{url('complain')}}" method="post">{{csrf_field()}}
-
-            <div class="form-group">
-              <label for="exampleFormControlInput1">Company Name</label>
-              <input type="text" class="form-control" name="comp_name" value="{{old('comp_name')}}" id="exampleFormControlInput1" placeholder="Enter your Company name" required>
-            </div>
-
-            <div class="form-group">
-              <label for="exampleFormControlInput1">E-mail</label>
-              <input type="email" class="form-control" name="email" value="{{ Auth::user()->email }}" id="exampleFormControlInput1" placeholder="Enter your email" required>
-            </div>
-
-            <div class="form-group">
-              <label for="Category">Product Category</label>
-              <!-- <input type="text" class="form-control" name="address" value="" id="exampleFormControlInput1" placeholder="Enter your product name" required> -->
-              <select name="equipment">
-                <option value="none">-</option>
-                <option value="Food display cabinet">Food Display Cabinet</option>
-                <option value="Kitchen equipment">Kitchen Equipment</option>
-                <option value="Laundary equipment">Laundary Equipment</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="exampleFormControlTextarea1">Message</label>
-              <textarea class="form-control message" name="complain" id="exampleFormControlTextarea1" rows="3" required></textarea>
-            </div>
-
-            <!-- <div class="form-group row">
-              <label for="fileField" class="col-sm-2 col-form-label">Upload a image</label>
-                <div class="col-sm-8">
-                  <input type="file" name="image" class="form-control-file">
-                </div>
-            </div> -->
-
-
-			      <div class="form-group">
-              <label for="exampleFormControlInput1">Address</label>
-              <input type="text" class="form-control" name="address" value="{{old('address')}}" id="exampleFormControlInput1" placeholder="Enter your place address" required>
-            </div>
-
-			      <div class="form-group">
-              <label for="exampleFormControlInput1">City</label>
-              <input type="text" class="form-control" name="region" value="{{old('region')}}" id="exampleFormControlInput1" placeholder="Enter the city near by your place" required>
-            </div>
-
-			      <div class="form-group row mt-0">
-              <div class="col-sm-4 offset-sm-8">
-                <button type="submit" class="btn btn-primary " name="login">Submit</button>
-                <button type="reset" class="btn btn-primary  " name="reset">Cancel</button>
-              </div>
-            </div>
-
-          </form>
-          
-       Do submit. Our Team will be consider your complaint as soon as possible!
-        </div>
-      </div>
+       <p>Job status... complaint:- on process/ completed3</p>
     </div>
   </section>
+
+<body>
+ 
+
+
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" href="htt                                                          ps://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
 </html>

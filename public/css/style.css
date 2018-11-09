@@ -1,12 +1,14 @@
  .mango_mid{
           min-height: 50px;
           background-color:#031768;
+        
         }
 
         .mango_bottom{
           min-height: 30px;
           background-color:#CCCCCC ;
           border-bottom: solid 2px #CCCCCC ;
+       
         }
         .mango_texthead{
           font-weight: bold;
@@ -28,12 +30,7 @@
          .mango_mid{
       min-height: 50px;
       background-color:#031768;
-    }
-
-    .mango_bottom{
-      min-height: 30px;
-      background-color:#CCCCCC ;
-      border-bottom: solid 2px #CCCCCC ;
+   
     }
     .mango_texthead{
       font-weight: bold;

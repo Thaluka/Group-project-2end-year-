@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en" dir="ltr">
   <head>
     <!-- Required meta tags -->
@@ -8,41 +9,47 @@
     <link rel="stylesheet" href="/css/master.css">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="images/logo.png" />
-    <link href="{{ asset('css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
 
+    <title>Estimations</title>
+   <link href="{{ asset('css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
 
-    <title>Login page</title>
-    
-<section>
-    <nav class="mango_mid navbar navbar-expand-lg navbar-light ">
-      <div class="mr-auto col-sm-3 col-lg-2 col-xs-12">
-           <img src="http://localhost:8000/images/logo.png" width="205px" height="70px" alt="Responsive image" class="d-inline-block align-left">
-      </div>
-      <ul class="mango_texthead navbar-nav mr-auto mt-0 mt-lg-1">
-          <!-- <h2 style="color:#FFFFFF;  text-justify:inter-word;text-align:Center;font-weight:550;">ASPARAI<br><span style="margin-left:15px; margin-right:15px;"> REPAIR</span><span  style="margin-left:5px; margin-right:10px;">  &</span><span  style="margin-left:5px; margin-right:10px;"> MAINTENANCE<span><span  style="margin-left:5px; margin-right:10px;"> SERVICE<span></h2> -->
+    <section>
+      <nav class="mango_mid navbar navbar-expand-lg navbar-light ">
+        <div class="mr-auto col-sm-3 col-lg-2 col-xs-12">
+             <img src="{{ asset('images/logo.png')}}" width="205px" height="70px" alt="Responsive image" class="d-inline-block align-left">
+        </div>
+        <ul class="mango_texthead navbar-nav mr-auto mt-0 mt-lg-1">
 
-            <h2 class=" font-weight-bold " style="margin-right:100px; color:#FFFFFF">ASPARAI<span style="margin-left:15px; margin-right:15px; ">REPAIR & MAINTENANCE SERVICE</span></h2>
-       </ul>
-    </nav>
-  </section>
+              <h2 class=" font-weight-bold " style="margin-right:100px; color:#FFFFFF">ASPARAI<span style="margin-left:15px; margin-right:15px; ">REPAIR & MAINTENANCE SERVICE</span></h2>
+         </ul>
+      </nav>
+    </section>
 
-  <nav class="mango_bottom navbar navbar-expand-lg navbar-light ">
+     <section>
+    <nav class="mango_bottom navbar navbar-expand-lg navbar-light ">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <a class="navbar-brand" href="#"></a>
-    <ul class="navbar-nav mt-0">
+   <!--  <ul class="navbar-nav mt-0">
+
+
+      <li class="mangonav_tab nav-item active ml-0  col-auto mr-auto">
+        <a class="nav-link text-left" href="{{url('custregoperator')}}">Customer registration</a>
+      </li>
+
       <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
-        <a class="nav-link text-left" href="#" >Job Details<span class="sr-only">(current)</span></a>
+        <a class="nav-link text-left" href="#">Job requests<span class="sr-only">(current)</span></a>
       </li>
       <li class="mangonav_tab nav-item active ml-0   col-auto mr-auto">
         <a class="nav-link text-left" href="#">Estimation</a>
       </li>
 
-     
+      
 
-    </ul>
+     
+    </ul> -->
     <ul class="navbar-nav ml-auto mt-0">
       <li class="nav-item dropdown mangonav_tab">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -65,66 +72,31 @@
     </div>
     </nav>
   </section>
-  <section>
-    <div class="col-lg-10 mt-4">
-         <table class="table  table-striped table-responsive" width="100%">
-                <thead>
-                       <tr class="bg-primary"  style="color:#FFFFFF;">
-                            <th class="bg-primary"></th>
-                            <th class="bg-primary">Company name</th>
-                            <th class="bg-primary">Customer's mail</th>
-                            <th class="bg-primary">Message</th>
-                            <th class="bg-primary">Location</th>
-                            <th class="bg-primary">Date & time</th>
-                            <th class="bg-primary">Action</th>
-                      </tr>
-               </thead>
-
-               <tbody class="table-dark">
-                 @foreach ($complains as $complain)
-
-                 <tr>
-                      <td>{{$complain->jobid}}</td>
-                      <td>{{$complain->company}}</td>
-                      <td>{{$complain->customeremail}}</td>
-                      <td>{{$complain->description}}</td>
-                      <td>{{$complain->location}}</td>
-                      <td>{{$complain->created_at}}</td>
-                      <td class="center">
-                        <a href="{{url('/assign')}}" class="btn btn-success btn-min mr-1">Assign Technician</a>
-                        <a href="#" class="btn btn-danger btn-min ml-1">Reject</a></td>
-                 </tr>
-
-                 @endforeach
-
-              </tbody>
-      </table>
-    </div>
-  </div>
-
-  </section>
 
 
 
+<!--          <div class="container col-lg-12 mt-3"></div> --> <!-- break between header and dashboard -->
+
+    <section id="main">
+       <!--  <div class="container col-lg-12"> -->
+            <div class="row">
+                <div class="col-md-2">
+                        <div class="list-group ">
+                                <a href="{{url('custregoperator')}}" class="list-group-item list-group-item-action">Registration</a>
+                                <a href="{{url('addjoboperator')}}" class="list-group-item list-group-item-action">Job Requests</a>
+                                <a href="#" class="list-group-item list-group-item-primary list-group-item-action active">Estimations</a>
+                                <a href="{{url('addproducts')}}" class="list-group-item list-group-item-action">Products</a>
+                              </div>
+
+                </div>
 
 
 
+VIEW ESTIMATION DETAILS THAT WANTS TO SEND FOR THE CUSTOMER
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
